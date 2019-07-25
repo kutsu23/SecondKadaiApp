@@ -10,10 +10,18 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    // 2画面目のラベルをStoryboardでこのViewControllerにIBOutletとして接続しておく
+    @IBOutlet weak var label: UILabel!
+    
+    // 受け取るためのプロパティを宣言しておく
+    var name:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        _ = name
+        label.text = "こんにちは、\(name) さん"
     }
     
 
